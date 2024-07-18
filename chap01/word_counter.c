@@ -10,6 +10,9 @@ int main() {
     int state = OUT; // inside or outside a word
     int c;
 
+    // This version [(c = getchar()) != EOF] centralizes the input.
+    // There is now only one reference to getchar - and shrinks the program.
+    // Note: != has higher precedence than `=` so we need the parentheses
     while((c = getchar()) != EOF) {
         if(c == '\n')
             nl++;

@@ -7,9 +7,13 @@ char line[MAX_LEN];
 char longest[MAX_LEN];
 int max = 0;
 
+// If the definition of the external variable occurs
+// in the source file before its use in a particular function, then there is
+// no need for an extern declaration in the function.
+
 // returns length of string (excluding '\0')
 int getline(void) {
-    // extern char line[]; // extern declaration is optional since `line` is defined before function
+    // extern char line[]; // extern declaration is optional since `line` is part of the same program
     char c;
     int i;
 

@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+#define UPPER 300
+#define LOWER 0
+#define STEP 20
+
 // function prototype
 int power(int base, int n);
 
@@ -66,7 +70,7 @@ int main()
     // printf("%.0f\n", nc);
 
     char c = 0;
-    if((c = 220) == 220) // RHS of `==` is compared with `value assigned to variable after assignment` 
+    if((c = 220) == 220) // RHS of `==` is compared with `value assigned to variable after the assignment` 
         printf("equal");
     else
         printf("%d", (int) c); // 220 overflows to -36
