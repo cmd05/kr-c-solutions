@@ -24,7 +24,7 @@ int main() {
     int n = 0;
 
     for(; i < len; i++) {
-        char c = tolower(str[i]);
+        char c = tolower(str[i]); // take care of both uppercase and lowercase characters
 
         if(c >= '0' && c <= '9')
             n = 16 * n + (c - '0');
