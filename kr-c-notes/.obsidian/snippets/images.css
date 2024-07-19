@@ -1,0 +1,26 @@
+div[src$="#right"] {
+    text-align:right;
+}
+
+div[src$="#left"] {
+    text-align:left;
+}
+
+div[src$="#center"] {
+    text-align:center;
+}
+
+div[src$="#inline"] {
+    display: inline-block;
+    margin: 10px;
+}
+
+.img-caption {
+    content: attr(alt);
+    display: block;
+    margin: 0.2rem 1rem 0rem 1rem;
+    font-size: 90%;
+    line-height: 1.4;
+    color: var(--text-faint);
+    text-align: center;
+}
