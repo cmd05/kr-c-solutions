@@ -5,3 +5,6 @@
 # kr-c-notes/
 *.xopp
 /test.c
+
+# ignore obsidian configs
+.*/
