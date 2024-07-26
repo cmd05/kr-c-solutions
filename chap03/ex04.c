@@ -31,9 +31,9 @@ void itoa(int n, char s[]) {
     }
 
     if(n < 0)
-        s[i] = '-';
+        s[i++] = '-';
     
-    s[++i] = '\0'; // null character is not reversed by reverse()
+    s[i] = '\0'; // null character is not reversed by reverse()
     reverse(s);
 }
 
