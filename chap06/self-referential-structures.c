@@ -12,6 +12,30 @@ int getword(char*, int, FILE* file);
 struct tnode* talloc(void);
 char* my_strdup(char*);
 
+
+// // `pointer to function (of two char * arguments) returning int`
+// typedef int (*PFI)(char *, char *);
+
+// size_t and ptrdiff_t are typedefs for the respective data types based on the machine
+// use of typedefs: portability and code readability
+
+// typedef struct tnode *Treeptr;
+
+// typedef struct tnode { /* the tree node: */
+//     char *word;
+//     /* points to the text */
+//     int count;
+//     /* number of occurrences */
+//     struct tnode *left;
+//     /* left child */
+//     struct tnode *right; /* right child */
+// } Treenode;
+
+// Treeptr talloc(void)
+// {
+//     return (Treeptr) malloc(sizeof(Treenode));
+// }
+
 // tree node
 struct tnode {
     char* word; // points to next word
