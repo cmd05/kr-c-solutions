@@ -1,0 +1,25 @@
+fopen, fopen_s
+Defined in header <stdio.h> 		
+	(1) 	
+
+FILE *fopen( const char *filename, const char *mode );
+
+	(until C99)
+
+FILE *fopen( const char *restrict filename, const char *restrict mode );
+
+	(since C99)
+
+errno_t fopen_s( FILE *restrict *restrict streamptr,
+                 const char *restrict filename,
+                 const char *restrict mode );
+
+	(2) 	(since C11)
+1) Opens a file indicated by filename and returns a pointer to the file stream associated with that file. mode is used to determine the file access mode.
+2) Same as (1), except that the pointer to the file stream is written to streamptr and the following errors are detected at runtime and call the currently installed constraint handler function:
+
+    streamptr is a null pointer
+    filename is a null pointer
+    mode is a null pointer
+
+As with all bounds-checked functions, fopen_s only guaranteed to be available if __STDC_LIB_EXT1__ is defined by the implementation and if the user defines __STDC_WANT_LIB_EXT1__ to the integer constant 1 before including <stdio.h>.
