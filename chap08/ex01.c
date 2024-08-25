@@ -7,7 +7,7 @@
 
 void error(int code, char *, ...);
 
-void print_out(int fd, const char* file) {
+void print_out(unsigned int fd, const char* file) {
     char buf[BUFSIZ];
     int n;
 

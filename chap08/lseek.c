@@ -5,7 +5,7 @@
 #include <fcntl.h>
 
 // get: read n bytes from position pos
-int get(int fd, long pos, char* buf, int n) {
+int get(unsigned int fd, long pos, char* buf, int n) {
     // The return value from lseek is a long that gives the new position in the file,
     // or -1 if an error occurs.
     if(lseek(fd, pos, 0) >= 0) // get to pos
